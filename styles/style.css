@@ -10,7 +10,6 @@ body
     width: 100VW;
     height: 100vh;
     background-color: #000;
-    background-image: url('../assets/home/background-home-desktop.jpg'); 
     background-repeat: no-repeat; 
     background-size: cover;
     background-position: center top;
@@ -85,6 +84,7 @@ h6
 p
 {
     line-height: 32px;
+    word-wrap:break-word;
 }
 
 .txt-wht
@@ -479,10 +479,6 @@ p
         margin-right: 5%;
     } */
 
-    body
-    {
-        background-image: url('../assets/home/background-home-tablet.jpg');
-    }
 
     .desktop-menu
     {
@@ -753,11 +749,6 @@ p
         margin-right: 5%;
     }
 
-    /* body{
-        background-image: url('../assets/home/background-home-mobile.jpg');
-
-    }
-*/
     h1
     {
         font-size: 100px;
@@ -766,6 +757,13 @@ p
     h2
     {
         font-size: 75px;
+    }
+
+    h3
+    {
+        font-size: 40px;
+        word-wrap: break-word;
+        text-align: center;
     }
 
     h5
