@@ -1,4 +1,4 @@
-*
+*, html, body
 {
     box-sizing: border-box;
 }
@@ -21,6 +21,11 @@ body
     padding-top: -96px;
 }
 
+a, a:hover, a:visited
+{
+    text-decoration: none;
+    color: #fff;
+}
 h1
 {
     font-family: "Bellefair";
@@ -141,10 +146,11 @@ p
     height: 96px;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 0;
     background: rgb(255, 255, 255, .04);
     backdrop-filter: blur(25px);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .desktop-nav
@@ -152,25 +158,48 @@ p
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.desktop-nav
-{
     margin: 0;
     padding: 0;
     list-style-type: none;
-
 }
 
 .desktop-nav li
 {
     font-family: "Barlow Condensed";
-    font-style: "Retular";
+    font-style: "Regular";
     font-size: 16px;
     letter-spacing: 2.7px;
     margin: 0 40px 0 0;
     color: #FFF;
+    line-height: 96px;
+    position: relative;
+    cursor: pointer;
 }
+
+
+.desktop-nav li::after
+{
+    position: absolute;
+    display: block;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 94px;
+    transition: all .3s linear;
+    transform: scale(0, 1);
+}
+
+.desktop-nav li:hover::after
+{
+    transform: scale(1, 1);
+    border-bottom: 2px solid rgba(255, 255, 255, .3);
+}
+
 
 .desktop-nav a
 {
@@ -235,6 +264,9 @@ p
 
 .explore-button
 {
+    position: relative;
+    bottom: 20px;
+    z-index: 10;
     width: 274px;
     height: 274px;
     border-radius: 100%;
@@ -247,8 +279,18 @@ p
     font-size: 32px;
     letter-spacing: 2px;
     color: #000;
-
+    outline: 0px solid #333;
+    transition: all .3s ease-in-out;
 }
+
+.explore-button:hover
+{
+    outline: 65px solid rgb(51, 51, 51, .9);
+    cursor: pointer;
+  
+}
+
+
 
 /* Start destination page styles */
 
@@ -300,6 +342,7 @@ p
 {
     width: 100%;
 }
+
 .destination-nav ul
 {
     width: 100%;
@@ -314,15 +357,51 @@ p
 .destination-nav ul li
 {
     margin: 0 3.5%;
+    padding: 2px 0;
     font-family: "Barlow Condensed";
     font-style: "Regular";
     color: #D0D6F9;
     letter-spacing: 2.7px;
+    position: relative;
+    cursor: pointer;
 }
 
 .destination-nav ul li:first-child
 {
     margin-left: 0;
+}
+
+.active
+{
+    height: 100%;
+    border-bottom: 2px solid #FFF;
+}
+
+.active:hover
+{
+    border-bottom: 2px solid transparent;
+}
+
+
+.dest-nav-item::after
+{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 2px solid transparent;
+    transform: scale(0, 1);
+    transition: all .3s linear;
+    height: 100%;
+}
+
+.dest-nav-item:hover::after
+{
+    transform: scale(1, 1);
+    border-bottom: 2px solid rgba(255, 255, 255, .5);
 }
 
 .destination-line
@@ -385,6 +464,15 @@ p
     background-color: rgba(255, 255, 255, .1744);
 }
 
+.active-dot
+{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.nav-dot:hover
+{
+    background-color: rgba(255, 255, 255, .5);
+}
 
 #mobileImage
 {
@@ -437,6 +525,7 @@ p
     justify-content: center;
     align-items: center;
     margin: 10px 0;
+    cursor: pointer
 }
 
 .section-text
@@ -457,6 +546,29 @@ p
 .section-image
 {
     width: calc(100vw * (100-53.3));
+}
+
+.active-tech, .active-tech a
+{
+    background-color: #FFF;
+    color: #000;
+    cursor: pointer;
+}
+
+a.active-tech
+{
+    color: #333;
+}
+
+.active-tech:hover, .tech-nav-item:hover
+{
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+a.active-tech:hover
+{
+    color: #fff;
 }
 
 /* hide image for smaller screens */
