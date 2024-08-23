@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space</title>
+    <link href="styles/style.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+    <script defer src="js/get-data.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <div id="pageNav" class="header">
+        <div class="logo">
+            <img src="assets/shared/logo.svg" alt="logo">
+        </div>
+        <div id="hamburgerMenu" class="hamburger-menu">
+            <img src="assets/shared/icon-hamburger.svg" alt="Toggle Menu">
+        </div>
+        <div class="line"></div>
+        <div class="desktop-menu">
+            <ul class="desktop-nav">
+                <li class="nav-item"><span class="nav-numbers">00 </span><a href="index.html">HOME</a></li>
+                <li class="nav-item"><span class="nav-numbers">01 </span><a href="destination.html">DESTINATION</a></li>
+                <li class="nav-item"><span class="nav-numbers">02 </span><a href="crew.html">CREW</a></li>
+                <li class="nav-item active"><span class="nav-numbers">03 </span><a href="technology.html">TECHNOLOGY</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="pageBody" class="page-body">
+            <!-- page caption-->
+        <div id="pageCaption" class="page-caption">
+            <h5><span class="barlow-bold txt-grey">03 </span><span class="txt-whit">SPACE LAUNCH 101</span></h5>
+        </div>
+        <div id="pageInfoContainer" class="page-info-container">
+   
+             <!-- page nav-->
+            <div id="techNav" class="tech-nav">
+
+                <div id="techNav1" class="tech-nav-item active-tech" data-url="vehicle">1</div>
+                <div id="techNav2" class="tech-nav-item" data-url="spaceport">2</div>
+                <div id="techNav3" class="tech-nav-item" data-url="capsule">3</div>
+
+            </div>
+            
+              <!-- page info-->
+            <div id="pageInfo" class="page-info">
+                <div class="page-info-box">
+                    <p>THE TERMINOLOGY...</p>
+                    <div id="name">
+                        <h3>LAUNCH VEHICLE</h3>
+                    </div>
+                    <div id="desc" class="desc">
+                        <p>
+                            A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
+                        </p>
+                    </div>
+                </div>
+            </div>
+               <!-- page img-->
+            <div id="imgContainer" class="img-container">
+                <div id="portraitImgContainer">
+                    <img src="assets/technology/image-launch-vehicle-portrait.jpg" id="portraitImg" class="portrait-img" alt="launch vehicle image">
+                </div>
+                <div id="landscapeImgContainer">
+                    <img src="assets/technology/image-launch-vehicle-landscape.jpg" id="landscapeImg" class="landscape-img" alt="launch vehicle image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    
+    <div id="mobileNav" class="mobile-nav">
+        <div id="closeBtn" class="mobile-nav-icon hidden"> 
+            <img src="assets/shared/icon-close.svg" alt="mobile menu close button">
+            </div>
+            <ul>
+                <li class="nav-item-mobile"><span class="nav-numbers">00 </span><a href="index.html">HOME</a></li>
+                <li class="nav-item-mobile"><span class="nav-numbers">01 </span><a href="destination.html">DESTINATION</a></li>
+                <li class="nav-item-mobile"><span class="nav-numbers">02 </span><a href="crew.html">CREW</a></li>
+                <li class="nav-item-mobile active-mobile"><span class="nav-numbers">03 </span><a href="technology.html">TECHNOLOGY</a></li>
+            </ul>
+    </div>
+    <script defer src="js/set-background-image.js" type="text/javascript"></script> 
+    <script defer src="js/mobile-menu.js" type="text/javascript"></script> 
+    
+</body>
+</html>
